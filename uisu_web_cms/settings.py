@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
 
     'graphene_django',
     'corsheaders',
+    'cloudinary',
 
     'news',
 ]
@@ -138,3 +141,11 @@ GRAPHENE = {
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ("https://localhost:3000",)
+
+
+# CLOUDINARY SETTINGS
+cloudinary.config(
+    cloud_name='unibadansu',
+    api_key = '676496872764576',
+    api_secret = '5iHtX-eB2xPdmYp03C5JtwhnoBw'
+)
