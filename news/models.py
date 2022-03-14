@@ -47,3 +47,11 @@ class Post(models.Model):
 
 
 
+class Executives(models.Model):
+    name = models.CharField(max_length=255)
+    position = models.CharField(max_length=255)
+    image = CloudinaryField('image')
+    contacts = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name
