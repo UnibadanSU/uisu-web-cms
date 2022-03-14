@@ -44,8 +44,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'cloudinary',
 
-    'rest_framework',
-
     'news',
 ]
 
@@ -137,9 +135,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # GRAPHENE SCHEMA PATH
 
-# GRAPHENE = {
-#     'SCHEMA': 'news.schema.schema',
-# }
+GRAPHENE = {
+    'SCHEMA': 'news.schema.schema',
+}
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ("https://localhost:3000",)

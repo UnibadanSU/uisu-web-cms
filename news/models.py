@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 
-from cloudinary.models import CloudinaryField
+# from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
@@ -35,7 +35,7 @@ class Post(models.Model):
     meta_description = models.CharField(max_length=155, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
-    image = CloudinaryField('image')
+    image = models.ImageField(upload_to='images/', blank=True)
     publish_date = models.DateTimeField(blank=True, null=True)
     published = models.BooleanField(default=False)
 
@@ -50,7 +50,7 @@ class Post(models.Model):
 class Executives(models.Model):
     name = models.CharField(max_length=255)
     position = models.CharField(max_length=255)
-    image = CloudinaryField('image')
+    image = models.ImageField(upload_to='images/', blank=True)
     contacts = models.TextField(blank=True)
 
     def __str__(self):
