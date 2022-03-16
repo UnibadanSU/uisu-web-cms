@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'graphene_django',
+    'rest_framework',
     'corsheaders',
     'cloudinary',
 
@@ -140,7 +140,7 @@ GRAPHENE = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ("https://localhost:3000",)
+CORS_ORIGIN_WHITELIST = ("http://localhost:3000","http://localhost:3001")
 
 
 # CLOUDINARY SETTINGS
