@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from news.models import Post, Profile, Tag
+from news.models import Executive, Post, Profile, Tag
 
 # Register your models here.
 
@@ -60,3 +60,9 @@ class PostAdmin(admin.ModelAdmin):
 
     date_hierarchy = "publish_date"
     save_on_top = True
+
+@admin.register(Executive) 
+class ExcecutivesAdmin(admin.ModelAdmin):
+    model = Executive
+
+   

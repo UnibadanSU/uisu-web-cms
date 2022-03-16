@@ -47,7 +47,7 @@ class Post(models.Model):
 
 
 
-class Executives(models.Model):
+class Executive(models.Model):
     name = models.CharField(max_length=255)
     position = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images/', blank=True)

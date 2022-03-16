@@ -1,4 +1,3 @@
-from pyexpat import model
 from django.contrib.auth import get_user_model
 from django.test import tag
 import graphene
@@ -27,8 +26,13 @@ class TagType(DjangoObjectType):
         model = models.Tag
 
 
+class ExecutiveType(DjangoObjectType):
+    class Meta:
+        model = models.Executive
+
 class Query(graphene.ObjectType):
     all_posts = graphene.List(PostType)
+    all_executives = graphene.List(ExecutiveType)
     author_by_username = graphene.Field(AuthorType, username=graphene.String())
     post_by_slug = graphene.Field(PostType, slug=graphene.String())
     post_by_author = graphene.List(PostType, username=graphene.String())
@@ -38,6 +42,9 @@ class Query(graphene.ObjectType):
         return (
             models.Post.objects.prefetch_related("tags").select_related("author").all()
         )
+
+    def resolve_all_executives(root, info):
+        return models.Executive.objects.all()
 
     def resolve_author_by_username(root, info, username):
         return models.Profile.objects.select_related("user").get(
