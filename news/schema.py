@@ -16,9 +16,9 @@ class AuthorType(DjangoObjectType):
         model = models.Profile
 
 
-class PostType(DjangoObjectType):
+class ArticleType(DjangoObjectType):
     class Meta:
-        model = models.Post
+        model = models.Article
 
 
 class TagType(DjangoObjectType):
@@ -31,16 +31,16 @@ class ExecutiveType(DjangoObjectType):
         model = models.Executive
 
 class Query(graphene.ObjectType):
-    all_posts = graphene.List(PostType)
+    all_articles = graphene.List(ArticleType)
     all_executives = graphene.List(ExecutiveType)
     author_by_username = graphene.Field(AuthorType, username=graphene.String())
-    post_by_slug = graphene.Field(PostType, slug=graphene.String())
-    post_by_author = graphene.List(PostType, username=graphene.String())
-    post_by_tag = graphene.List(PostType, tag=graphene.String())
+    article_by_slug = graphene.Field(ArticleType, slug=graphene.String())
+    article_by_author = graphene.List(ArticleType, username=graphene.String())
+    article_by_tag = graphene.List(ArticleType, tag=graphene.String())
 
-    def resolve_all_posts(root, info):
+    def resolve_all_articles(root, info):
         return (
-            models.Post.objects.prefetch_related("tags").select_related("author").all()
+            models.Article.objects.prefetch_related("tags").select_related("author").all()
         )
 
     def resolve_all_executives(root, info):
@@ -51,19 +51,19 @@ class Query(graphene.ObjectType):
             user__username=username
         )
 
-    def resolve_post_by_slug(root, info, slug):
+    def resolve_article_by_slug(root, info, slug):
         return (
-            models.Post.objects.prefetch_related("tags").select_related("author").get(slug=slug)
+            models.Article.objects.prefetch_related("tags").select_related("author").get(slug=slug)
         )
 
-    def resolve_posts_by_author(root, info, username):
+    def resolve_articles_by_author(root, info, username):
         return (
-            models.Post.objects.prefetch_related("tags").select_related("author").filter(author__user__username=username)
+            models.Article.objects.prefetch_related("tags").select_related("author").filter(author__user__username=username)
         )
 
-    def resolve_posts_by_tag(root, info, tag):
+    def resolve_articles_by_tag(root, info, tag):
         return (
-            models.Post.objects.prefetch_related("tags").select_related("author").filter(tags__name__iexact=tag)
+            models.Article.objects.prefetch_related("tags").select_related("author").filter(tags__name__iexact=tag)
         )
 
 
