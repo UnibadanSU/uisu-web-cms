@@ -9,25 +9,31 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+db_from_env=dj_database_url.config(conn_max_age=600)
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f4q34o1cq72udsuqy(yg8t9c_%3c797&m4t&hdnkq^$(-sp86h'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -96,7 +102,7 @@ DATABASES = {
     }
 }
 
-
+DATABASES['default'].update(db_from_env)
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -131,7 +137,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = 'uisu-web-photo/'
 
@@ -140,6 +150,10 @@ MEDIA_URL = 'uisu-web-photo/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# whitenoise finders
+
+WHITENOISE_USE_FINDERS = True
 
 # GRAPHENE SCHEMA PATH
 
@@ -157,16 +171,16 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'unibadansu',
-    'API_KEY': '676496872764576',
-    'API_SECRET': '5iHtX-eB2xPdmYp03C5JtwhnoBw',
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_API_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
 
 cloudinary.config(
-    cloud_name='unibadansu',
-    api_key = '676496872764576',
-    api_secret = '5iHtX-eB2xPdmYp03C5JtwhnoBw'
+    cloud_name=os.environ.get('CLOUDINARY_API_NAME'),
+    api_key = os.environ.get('CLOUDINARY_API_KEY'),
+    api_secret = os.environ.get('CLOUDINARY_API_SECRET')
 )
 
 
