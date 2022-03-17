@@ -169,7 +169,7 @@ GRAPHENE = {
 
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ("http://localhost:3000","http://localhost:3001", "http://127.0.0.1:8000")
+CORS_ORIGIN_WHITELIST = ("https://uisu-web.cms.herokuapp.com",)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
