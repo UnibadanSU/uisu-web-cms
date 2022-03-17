@@ -1,46 +1,17 @@
-aniso8601 @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/0a/9c/92/82a6aa47d71fa536cee866513d0fc26da7dfbda587e6348c63bd770641/aniso8601-7.0.0-py2.py3-none-any.whl
-asgiref @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/12/c6/58/b461520efbe0ac0a67261f2d665156c3efabcc6392f021f3db62abbd51/asgiref-3.5.0-py3-none-any.whl
-attrs @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/9a/27/ab/6895b786f345452394b42c1fdbe863803d0396e675b632c01cb13cad92/attrs-21.4.0-py2.py3-none-any.whl
-autopep8 @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/99/fa/8e/112982d07bedbc9f4184629dd998ac5b3cb0a01cdee98ded03128c72bc/autopep8-1.6.0-py2.py3-none-any.whl
 certifi==2021.10.8
-charset-normalizer @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/ae/14/8e/087a104edb7ec627884755272de815d8ee4fd53b8745fdb12a087dd2e1/charset_normalizer-2.0.12-py3-none-any.whl
 cloudinary==1.29.0
-dj-database-url @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/86/81/2f/8da8bcd6372e6797609dd5d6191fd427ed8aeb7bd818cfbf8c2d7b4cde/dj_database_url-0.5.0-py2.py3-none-any.whl
-dj-static @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/16/a0/a4/f30fc85b990e411d334feba18536604d86744620e934f0f302d50ee3bd/dj-static-0.0.6.tar.gz
-Django @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/15/24/44/674b16e8d6aa16725e64e97704f4d979f2e143a7c7ae1c24cd2713eac7/Django-3.1.4-py3-none-any.whl
-django-cloudinary-storage @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/1e/d9/90/2a393f4d62953de07452314573d82c49e2ade987393400bc6bc9b07551/django_cloudinary_storage-0.3.0-py3-none-any.whl
-django-cors-headers @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/82/37/ac/5fb7015795bbcbc2759480d82d3d24bee1bed2de689b414506f516ac41/django_cors_headers-3.6.0-py3-none-any.whl
+dj-database-url==0.5.0
+dj-static==0.0.6
+Django==3.1.4
+django-cloudinary-storage==0.3.0
+django-cors-headers==3.6.0
 django-environ==0.8.1
 django-filter==21.1
 djangorestframework==3.13.1
-graphene @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/13/9e/df/e9c90333b8d4ed8236eb3696fa6496426462504a99051605e464b65c33/graphene-2.1.9-py2.py3-none-any.whl
-graphene-django @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/c5/6c/39/cc8d0f8bcb5b3a41b68e6072cd50c6b430e34f1e273e38e8818ea806ad/graphene_django-2.14.0-py2.py3-none-any.whl
-graphql-core @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/a5/84/fa/12b8e97a51b0decd7b77a0c2846fa936a17ea2a7f93f50af7ea1151fdf/graphql_core-2.3.2-py2.py3-none-any.whl
-graphql-relay @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/bb/3d/a6/201a818409609e031dfe0a94b92ab59d8352cfac8f593a08b6646dff1e/graphql_relay-2.0.1-py3-none-any.whl
-gunicorn @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/eb/33/9c/43e158642e15413395d933fef80bb16fa6b50a6ed8dd157f506b6b2c03/gunicorn-20.1.0-py3-none-any.whl
-idna @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/f7/09/c9/8e80952436ff87855ddff4891a35ecf913b2b5dc97911f02a070ff2b1f/idna-3.3-py3-none-any.whl
-importlib-metadata==4.11.3
+graphene==2.1.9
+graphene-django==2.14.0
+gunicorn==20.1.0
 Markdown==3.3.6
-more-itertools @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/ef/04/3c/cde360772e23ed0a5f61cdbbe79d28f3a9680c45072b4fb9c5eb1ecd00/more_itertools-8.12.0-py3-none-any.whl
-packaging @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/7f/d5/4c/1d3c4776012fc0bbe1f86e69bde2c5e36d2d32caa2e4845ac1fc08ab3f/packaging-21.3-py3-none-any.whl
-Pillow @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/b9/d0/3b/2108874afb323d6ad3d0b9ccb5b7bdceca035ee98f3a9afa21acd7fec4/Pillow-9.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-pluggy @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/9c/e5/0b/2d64d03361a081edeb5d2ec5f286ccf9719587781fbf6822e1b6384c27/pluggy-0.13.1-py2.py3-none-any.whl
-promise @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/0f/4f/91/54827555a9ce3597aca6d8a5ca3066e4cbdeb55dfc09e7dd69e113cec7/promise-2.3.tar.gz
+Pillow==9.0.1
 psycopg2-binary==2.9.3
-py @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/ab/b4/c3/a3971fd0d6ab5a2e40a43ad7b809005422d7cf333f7be6ccdfe9002e1b/py-1.11.0-py2.py3-none-any.whl
-pycodestyle @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/c8/b5/c4/20e98d955193296673ec9d57510115c96ea8c60a7e2cd212c3999f9d20/pycodestyle-2.8.0-py2.py3-none-any.whl
-pyparsing @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/8a/67/7c/c21f632fb8255d9fc3882ed4548b0270011ef2a160a6031635274760a2/pyparsing-3.0.7-py3-none-any.whl
-pytest @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/9d/40/6b/50d2cb06df545acea43c65379c5456f4fbc703115a703bc7cd433ddf70/pytest-5.4.3-py3-none-any.whl
-pytz @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/07/c1/43/6f22a533e7bc5e277f10b4c6033e936ff7bbeb6464e5f27dbfb6c641d7/pytz-2021.3-py2.py3-none-any.whl
-requests @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/dc/17/bf/8d9779110a13421f6181028974b24800ec70f28bf9b311411e1868b8c7/requests-2.27.1-py2.py3-none-any.whl
-Rx @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/6a/c0/7f/d884f0dfc237072cc4cf7b7738abb4384f5e0de1db74cdab63c3e6c29b/Rx-1.6.1-py2.py3-none-any.whl
-singledispatch @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/b0/9c/2e/1cfa2ff1a732322efabb59430404415cb423f5311b3d77018dd56bb21c/singledispatch-3.7.0-py2.py3-none-any.whl
-six @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/48/e6/04/8118155ae3ec3a16dd2a213bbf7a7d8a62c596b2e90f73a22c896269f1/six-1.16.0-py2.py3-none-any.whl
-sqlparse @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/bd/30/d0/940567a036c6ea57abe7098acbd123f8c8985ccc27713365ae80d28f89/sqlparse-0.4.2-py3-none-any.whl
-static3 @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/80/28/d2/6dc40675ce66cbea248bb7e07037069dccb6340e0056da27e5730515b8/static3-0.7.0.tar.gz
-text-unidecode @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/9b/cc/f2/c615087594418f3b86c03fb83c56a1d3b673e89924d4bd0cece68a7615/text_unidecode-1.3-py2.py3-none-any.whl
-toml @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/9f/8c/c3/7b4f6778d60f3c9fa11f8fd0e48243bbad25a04975e0a01006b6350594/toml-0.10.2-py2.py3-none-any.whl
-uisu-web-cms==0.1.0
-urllib3==1.26.8
-wcwidth @ file:///home/oluwasomidotun/.cache/pypoetry/artifacts/36/68/e2/7232f431072d5e8aeec124120b9a1d095d45da10311d271fac10982473/wcwidth-0.2.5-py2.py3-none-any.whl
-zipp==3.7.0
+djangorestframework==3.13.1
