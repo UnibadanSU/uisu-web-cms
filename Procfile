@@ -1,0 +1,1 @@
+web: gunicorn uisu_web_cms.wsgi --log-file
