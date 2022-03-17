@@ -16,10 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from django.views.decorators.csrf import csrf_exempt
-from graphene_django.views import GraphQLView
+from rest_framework import routers
+from news import views
+
+router = routers.DefaultRouter()
+router.register(r'articles', views.ArticleView)
+router.register(r'profiles', views.ProfileView)
+router.register(r'tags', views.TagView)
+router.register(r'executives', views.ExecutiveView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('graphql', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path('api/', include(router.urls)),
+    
 ]
