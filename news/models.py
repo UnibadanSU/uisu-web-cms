@@ -35,7 +35,7 @@ class Article(models.Model):
     meta_description = models.CharField(max_length=155, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='images/', blank=True) 
+    image = models.ImageField(upload_to='images/articles/', blank=True) 
     publish_date = models.DateTimeField(blank=True, null=True)
     published = models.BooleanField(default=False)
 
@@ -50,7 +50,7 @@ class Article(models.Model):
 class Executive(models.Model):
     name = models.CharField(max_length=255)
     position = models.CharField(max_length=255)
-    image = CloudinaryField()
+    image = models.ImageField(upload_to='images/executives/', blank=True)
     contacts = models.TextField(blank=True)
 
     def __str__(self):

@@ -41,8 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'graphene_django',
+
     'corsheaders',
-    'cloudinary_storage',
     'cloudinary',
     'cloudinary_storage',
 
@@ -137,6 +138,11 @@ MEDIA_URL = 'uisu-web-photo/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# GRAPHENE SCHEMA PATH
+
+GRAPHENE = {    
+    'SCHEMA': 'news.schema.schema',
+}
 
 
 CORS_ORIGIN_ALLOW_ALL = False
@@ -145,8 +151,6 @@ CORS_ORIGIN_WHITELIST = ("http://localhost:3000","http://localhost:3001", "http:
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # CLOUDINARY SETTINGS
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 CLOUDINARY_STORAGE = {
@@ -162,10 +166,5 @@ cloudinary.config(
     api_secret = '5iHtX-eB2xPdmYp03C5JtwhnoBw'
 )
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'unibadansu',
-    'API_KEY': '676496872764576',
-    'API_SECRET': '5iHtX-eB2xPdmYp03C5JtwhnoBw',
-}
 
 CLOUDINARY_ROOT_URL = "https://res.cloudinary.com/"
