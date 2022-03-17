@@ -143,8 +143,17 @@ GRAPHENE = {
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ("https://localhost:3000",)
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # CLOUDINARY SETTINGS
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'unibadansu',
+    'API_KEY': '676496872764576',
+    'API_SECRET': '5iHtX-eB2xPdmYp03C5JtwhnoBw',
+}
+
+
 cloudinary.config(
     cloud_name='unibadansu',
     api_key = '676496872764576',
