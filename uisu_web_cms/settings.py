@@ -143,8 +143,15 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MEDIA_URL = 'uisu-web-photo/'
+STATIC_ROOT = ''
 
+STATICFILES_DIRS = [
+    "/static/",
+]
+
+MEDIA_URL = 'https://res.cloudinary.com/'
+
+MEDIA_ROOT = '/uisu-web-photo/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
