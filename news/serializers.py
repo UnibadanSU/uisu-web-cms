@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from news.models import Post, Profile, Executive, Tag
+from news.models import Article, Profile, Executive, Tag
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,9 +14,9 @@ class TagSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class PostSerializer(serializers.ModelSerializer):
+class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Post
+        model = Article
         fields = '__all__'
 
 
@@ -24,3 +24,7 @@ class ExecutiveSerializer(serializers.ModelSerializer):
     class Meta:
         model = Executive
         fields = '__all__'
+
+
+# def get_image_url(self):
+#     return '{} {}'.format(settings.CLOUDINARY_ROOT_URL, self.image.url)

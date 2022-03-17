@@ -24,7 +24,7 @@ class Tag(models.Model):
         return self.name
     
 
-class Post(models.Model):
+class Article(models.Model):
     class Meta:
         ordering = ['-publish_date']
 
@@ -35,7 +35,7 @@ class Post(models.Model):
     meta_description = models.CharField(max_length=155, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
-    image = CloudinaryField()
+    image = models.ImageField(upload_to='images/', blank=True) 
     publish_date = models.DateTimeField(blank=True, null=True)
     published = models.BooleanField(default=False)
 

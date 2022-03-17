@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from news.models import Executive, Post, Profile, Tag
+from news.models import Executive, Article, Profile, Tag
 
 # Register your models here.
 
@@ -14,9 +14,9 @@ class TagAdmin(admin.ModelAdmin):
     model = Tag
 
 
-@admin.register(Post)
-class PostAdmin(admin.ModelAdmin):
-    model = Post
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    model = Article
 
     list_display = (
         "id",
