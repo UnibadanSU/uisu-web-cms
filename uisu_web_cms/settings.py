@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['uisu-web-cms.herokuapp.com',]
+ALLOWED_HOSTS = ['uisu-web-cms.herokuapp.com/',]
 
 
 # Application definition
@@ -169,7 +169,7 @@ GRAPHENE = {
 
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ("https://uisu-web.cms.herokuapp.com",'uisu-web-cms.herokuapp.com')
+CORS_ORIGIN_WHITELIST = ("https://uisu-web.cms.herokuapp.com/",'uisu-web-cms.herokuapp.com/')
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
