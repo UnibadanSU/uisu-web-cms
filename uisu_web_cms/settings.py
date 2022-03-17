@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'graphene_django',
     'corsheaders',
     'cloudinary',
+    'cloudinary_storage',
 
     'news',
 ]
