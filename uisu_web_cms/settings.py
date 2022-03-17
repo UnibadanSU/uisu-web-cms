@@ -143,10 +143,12 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_ROOT = ''
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    "/static/",
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 MEDIA_URL = 'https://res.cloudinary.com/'
